@@ -1,0 +1,14 @@
+C:\Users\Giovanni\Desktop\Projects\UnitOfWork\MyDataStructures\bin\Debug\net9.0\MyDataStructures.exe
+C:\Users\Giovanni\Desktop\Projects\UnitOfWork\MyDataStructures\bin\Debug\net9.0\MyDataStructures.deps.json
+C:\Users\Giovanni\Desktop\Projects\UnitOfWork\MyDataStructures\bin\Debug\net9.0\MyDataStructures.runtimeconfig.json
+C:\Users\Giovanni\Desktop\Projects\UnitOfWork\MyDataStructures\bin\Debug\net9.0\MyDataStructures.dll
+C:\Users\Giovanni\Desktop\Projects\UnitOfWork\MyDataStructures\bin\Debug\net9.0\MyDataStructures.pdb
+C:\Users\Giovanni\Desktop\Projects\UnitOfWork\MyDataStructures\obj\Debug\net9.0\MyDataStructures.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Giovanni\Desktop\Projects\UnitOfWork\MyDataStructures\obj\Debug\net9.0\MyDataStructures.AssemblyInfoInputs.cache
+C:\Users\Giovanni\Desktop\Projects\UnitOfWork\MyDataStructures\obj\Debug\net9.0\MyDataStructures.AssemblyInfo.cs
+C:\Users\Giovanni\Desktop\Projects\UnitOfWork\MyDataStructures\obj\Debug\net9.0\MyDataStructures.csproj.CoreCompileInputs.cache
+C:\Users\Giovanni\Desktop\Projects\UnitOfWork\MyDataStructures\obj\Debug\net9.0\MyDataStructures.dll
+C:\Users\Giovanni\Desktop\Projects\UnitOfWork\MyDataStructures\obj\Debug\net9.0\refint\MyDataStructures.dll
+C:\Users\Giovanni\Desktop\Projects\UnitOfWork\MyDataStructures\obj\Debug\net9.0\MyDataStructures.pdb
+C:\Users\Giovanni\Desktop\Projects\UnitOfWork\MyDataStructures\obj\Debug\net9.0\MyDataStructures.genruntimeconfig.cache
+C:\Users\Giovanni\Desktop\Projects\UnitOfWork\MyDataStructures\obj\Debug\net9.0\ref\MyDataStructures.dll
