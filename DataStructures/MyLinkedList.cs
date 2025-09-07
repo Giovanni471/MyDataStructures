@@ -202,13 +202,6 @@ namespace MyDataStructures.DataStructures
             return false;
         }
 
-        public void CopyTo(Array array, int index)
-        {
-            var arr = new T[array.Length];
-            array.CopyTo(arr, index);
-
-            CopyTo(arr, index);
-        }
         #endregion
     }
 

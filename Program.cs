@@ -6,32 +6,16 @@ namespace MyDataStructures
     {
         static void Main(string[] args)
         {
-            var list = new MyLinkedList<int>();
+            var lista = new MyDoubleLinkedList<int>(4);
 
-            list.Add(1);
-            list.Add(3);
-            list.Add(4);
+            lista.AddFirst(5);
+            lista.AddLast(15);
+            lista.AddLast(55);
 
-            var arr = new int[3];
-            list.CopyTo(arr, 0);
+            lista.Remove(5);
+            lista.Remove(4);
 
-
-            foreach (int i in arr)
-            {
-                Console.WriteLine(i);
-            }
-
-            //Console.WriteLine(list.First);
-
-            var lista = new LinkedList<int>();
-            lista.AddLast(1);
-            lista.AddLast(2);
-            lista.AddLast(3);
-
-            arr = new int[3];
-            lista.CopyTo(arr, 0);
-
-            foreach (int i in arr) 
+            foreach (int i in lista)
             {
                 Console.WriteLine(i);
             }
