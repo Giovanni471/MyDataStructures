@@ -6,19 +6,21 @@ namespace MyDataStructures
     {
         static void Main(string[] args)
         {
-            var lista = new MyDoubleLinkedList<int>(4);
+            var queue = new MyQueue<int>();
 
-            lista.AddFirst(5);
-            lista.AddLast(15);
-            lista.AddLast(55);
+            queue.Enqueue(1);
+            queue.Enqueue(2);
 
-            lista.Remove(5);
-            lista.Remove(4);
+            queue.Enqueue(3);
+            queue.Dequeue();
 
-            foreach (int i in lista)
+            Console.WriteLine(queue.Peek());
+            
+            foreach (int i in queue) 
             {
                 Console.WriteLine(i);
             }
+            Console.WriteLine(queue.Length);
         }
     }
 }
