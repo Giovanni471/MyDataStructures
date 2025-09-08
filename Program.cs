@@ -17,7 +17,7 @@ namespace MyDataStructures
             Console.WriteLine(stack.Pop());
             Console.WriteLine(stack.Pop());
 
-            Console.WriteLine(stack.Length);
+            Console.WriteLine(stack.Count);
         }
     }
 }
