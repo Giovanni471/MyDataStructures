@@ -6,21 +6,18 @@ namespace MyDataStructures
     {
         static void Main(string[] args)
         {
-            var queue = new MyQueue<int>();
+            var stack = new MyStack<int>(5);
 
-            queue.Enqueue(1);
-            queue.Enqueue(2);
+            stack.Push(20);
+            stack.Push(30);
+            stack.Push(40);
 
-            queue.Enqueue(3);
-            queue.Dequeue();
 
-            Console.WriteLine(queue.Peek());
-            
-            foreach (int i in queue) 
-            {
-                Console.WriteLine(i);
-            }
-            Console.WriteLine(queue.Length);
+            Console.WriteLine(stack.Pop());
+            Console.WriteLine(stack.Pop());
+            Console.WriteLine(stack.Pop());
+
+            Console.WriteLine(stack.Length);
         }
     }
 }
