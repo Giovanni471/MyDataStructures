@@ -27,7 +27,7 @@ namespace MyDataStructures.DataStructures
 
         public TValue this[TKey key] { get => GetValue(key); set => Add(key, value); }
 
-        private TValue GetValue(TKey? key)
+        private TValue GetValue(TKey key)
         {
             var keyHashed = HashFunction(key);
 
@@ -174,7 +174,7 @@ namespace MyDataStructures.DataStructures
                         _capacity--;
                         return true;
                     }
-                }                
+                }
             }
 
             return false;
