@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace MyDataStructures.DataStructures
 {
     public class MyHashTable<TKey, TValue> : IDictionary<TKey, TValue>
     {
-        private MyLinkedList<(TKey k, TValue v)>[]? _bucket;
+        private MyLinkedList<(TKey k, TValue v)>[] _bucket;
         private int _capacity;
         public MyHashTable()
         {
@@ -115,7 +116,33 @@ namespace MyDataStructures.DataStructures
 
         public void CopyTo(KeyValuePair<TKey, TValue>[] array, int arrayIndex)
         {
-            throw new NotImplementedException();
+            if (array is null)
+                throw new ArgumentNullException("array");
+
+            if (array.Length < arrayIndex)
+                throw new ArgumentOutOfRangeException("index");
+
+            if (array.Length > _capacity)
+                throw new ArgumentException("Insufficient space in the target location to copy the information.");
+
+            if (array.Length - arrayIndex > _capacity)
+                throw new ArgumentException("Insufficient space in the target location to copy the information.");
+
+            if (_bucket is null)
+                return;
+
+            int i = 0;
+            foreach (var arr in _bucket)
+            {
+                if (arr is null)
+                    continue;
+
+                foreach (var element in arr)
+                {
+                    array[i] = new KeyValuePair<TKey, TValue>(element.k, element.v);
+                    i++;
+                }
+            }
         }
 
         public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator()
@@ -191,7 +218,7 @@ namespace MyDataStructures.DataStructures
                 result *= (int)c;
             }
 
-            result = result % 25; // MaxLength 25 to test collisions
+            result = result % 100; // MaxLength 100 
             return result;
         }
     }
