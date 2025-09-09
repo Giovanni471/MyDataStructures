@@ -74,7 +74,10 @@ namespace MyDataStructures.DataStructures
 
         private void Resize()
         {
-            _bucket = new MyLinkedList<(TKey k, TValue v)>[_bucket.Length * 2]; // Resize logic
+            var arr = new MyLinkedList<(TKey k, TValue v)>[_bucket.Length * 2]; // Resize logic without losing elements 
+
+            _bucket.CopyTo(arr, 0);
+            _bucket = arr;
         }
 
         public void Add(KeyValuePair<TKey, TValue> item)
@@ -85,6 +88,7 @@ namespace MyDataStructures.DataStructures
         public void Clear()
         {
             _bucket = new MyLinkedList<(TKey k, TValue v)>[_bucket.Length];
+            _capacity = 0;
         }
 
         public bool Contains(KeyValuePair<TKey, TValue> item)
