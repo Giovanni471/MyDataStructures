@@ -112,10 +112,7 @@ namespace MyDataStructures.DataStructures
         {
             var keyHashed = HashFunction(key);
 
-            if (_bucket[keyHashed] is not null)
-                return true;
-
-            return false;
+            return _bucket[keyHashed] is not null;
         }
 
         public void CopyTo(KeyValuePair<TKey, TValue>[] array, int arrayIndex)
@@ -188,7 +185,7 @@ namespace MyDataStructures.DataStructures
 
             if (_bucket[keyHashed] is not null)
             {
-                value = _bucket[keyHashed].First.v;
+                value = _bucket[keyHashed].First(x => x.k.Equals(key)).v;
                 return true;
             }
 
@@ -217,12 +214,7 @@ namespace MyDataStructures.DataStructures
             if (val == null)
                 return result;
 
-            foreach (char c in val)
-            {
-                result *= (int)c;
-            }
-
-            result = result % 100; // MaxLength 100 
+            result = val.GetHashCode() % 100; // MaxLength 100 
             return result;
         }
     }
