@@ -191,6 +191,14 @@ namespace MyDataStructures.DataStructures
             {
                 if (current.Value.Equals(item))
                 {
+                    if(current == _head)
+                    {
+                        _head = null;
+                        _tail = _head;
+                        _length = 0;
+                        return true;
+                    }
+
                     currentParent.Next = current.Next;
                     _length--;
                     return true;

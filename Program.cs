@@ -6,18 +6,13 @@ namespace MyDataStructures
     {
         static void Main(string[] args)
         {
-            var stack = new MyStack<int>(5);
+            var MyHashTable = new MyHashTable<string, string>(10);
 
-            stack.Push(20);
-            stack.Push(30);
-            stack.Push(40);
+            MyHashTable.Add("test", "test");
+            MyHashTable.Add("test", "testProva");
+            MyHashTable.Add("tets", "test2");
 
-
-            Console.WriteLine(stack.Pop());
-            Console.WriteLine(stack.Pop());
-            Console.WriteLine(stack.Pop());
-
-            Console.WriteLine(stack.Count);
+            Console.WriteLine(MyHashTable["test"]);
         }
     }
 }
