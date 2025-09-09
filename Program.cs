@@ -6,13 +6,13 @@ namespace MyDataStructures
     {
         static void Main(string[] args)
         {
-            var MyHashTable = new MyHashTable<string, string>(10);
+            var mySet = new MyHashSet<int>(3);
+            
+            mySet.Add(81); 
+            mySet.Add(10);
+            mySet.Add(30);
 
-            MyHashTable.Add("test", "test");
-            MyHashTable.Add("test", "testProva");
-            MyHashTable.Add("tets", "test2");
-
-            Console.WriteLine(MyHashTable["test"]);
+            var result1 = mySet.Contains(10);
         }
     }
 }

@@ -210,7 +210,7 @@ namespace MyDataStructures.DataStructures
                 throw new ArgumentNullException(nameof(key));
 
             var hashCode = CalculateHash(key.ToString());
-            return hashCode & 0x7FFFFFFF;
+            return Math.Abs(hashCode);
         }
 
         private int CalculateHash(string val)
