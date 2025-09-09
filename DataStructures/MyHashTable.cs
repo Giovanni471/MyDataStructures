@@ -166,9 +166,15 @@ namespace MyDataStructures.DataStructures
 
             if (_bucket[keyHashed] is not null)
             {
-                _bucket[keyHashed] = null;
-                _capacity--;
-                return true;
+                foreach(var arr in _bucket[keyHashed])
+                {
+                    if (arr.k.Equals(key))
+                    {
+                        _bucket[keyHashed].Remove(arr);
+                        _capacity--;
+                        return true;
+                    }
+                }                
             }
 
             return false;
